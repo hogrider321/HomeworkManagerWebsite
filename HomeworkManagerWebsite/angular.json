@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "HomeworkManagerWebsite"
+    }
+  },
+  "defaultProject": "HomeworkManagerWebsite",
+  "cli": {
+    "analytics": false
+  }
 }
