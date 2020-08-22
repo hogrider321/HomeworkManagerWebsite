@@ -29,12 +29,12 @@ nav ul {
     display: flex;
 }
 
-nav .website-name {
-    font-family: Roboto, sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
+nav .website-name a{
     color: #FFFFFF;
+    font-size: 50px;
+    font-family: Roboto, sans-serif;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 .nav-items li {
@@ -52,7 +52,7 @@ nav .website-name {
 
 /* Header */
 
-.header-container {
+.assignments {
     background-color: #FFFFFF;
     height: calc(100vh - 72px);
 }
