@@ -7,6 +7,7 @@ import { NewAssignmentComponent } from './new-assignment/new-assignment.componen
 const routes: Routes = [
   {path: 'dashboard', component: DashboardComponent},
   {path: 'classes', component: ClassesComponent},
+  {path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   {path: 'new-assignment', component: NewAssignmentComponent}
 ];
 
