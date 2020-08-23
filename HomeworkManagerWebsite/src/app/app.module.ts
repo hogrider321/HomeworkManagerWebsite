@@ -7,6 +7,9 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClassesComponent } from './classes/classes.component';
 import { NewAssignmentComponent } from './new-assignment/new-assignment.component';
 
+import {MatTableModule} from '@angular/material/table';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -16,7 +19,8 @@ import { NewAssignmentComponent } from './new-assignment/new-assignment.componen
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatTableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
