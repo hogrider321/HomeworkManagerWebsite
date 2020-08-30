@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClassesComponent } from './classes/classes.component';
 import { NewAssignmentComponent } from './new-assignment/new-assignment.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import {MatTableModule} from '@angular/material/table';
 
@@ -20,7 +21,9 @@ import {MatTableModule} from '@angular/material/table';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    MatTableModule
+    MatTableModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

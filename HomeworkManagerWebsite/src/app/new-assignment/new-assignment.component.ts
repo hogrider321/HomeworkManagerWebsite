@@ -1,14 +1,30 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
 
 @Component({
   selector: 'app-new-assignment',
   templateUrl: './new-assignment.component.html'
 })
 export class NewAssignmentComponent implements OnInit {
+  @Output() submitted = new EventEmitter<any>();
 
-  constructor() { }
+  form: FormGroup;
+
+  constructor(fb:FormBuilder) {
+    this.form = fb.group({
+      name:'',
+      dueDate: ''
+      });
+    }
 
   ngOnInit(): void {
   }
 
+  submit(): void {
+    console.log(this.form.get('name').value);
+    console.log(this.form.get('dueDate').value);
+
+    this.submitted.emit(this.form);
+    // this.submitted.emit({this.form.get('name').value, this.form.get('dueDate').value});
+  }
 }

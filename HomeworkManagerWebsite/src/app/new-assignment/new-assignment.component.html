@@ -1,1 +1,8 @@
-<p>new-assignment works!</p>
+<div [formGroup]="form"> 
+    <label for="name">Name:</label><br>
+    <input type="text" id="name" name="name" formControlName="name"><br>
+    <label for="dueDate">Due Date:</label><br>
+    <input type="text" id="dueDate" name="dueDate" formControlName="dueDate">
+</div>
+
+<button mat-raised-button (click)="submit()">Submit</button>
