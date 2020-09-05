@@ -24,12 +24,11 @@ export class NewAssignmentComponent implements OnInit {
   }
 
   submit(): void {
-    console.log(this.form.get('name').value);
-    console.log(this.form.get('dueDate').value);
-    console.log(this.form.get('difficulty').value);
-    console.log(this.form.get('class').value);
+    // console.log(this.form.get('name').value);
+    // console.log(this.form.get('dueDate').value);
+    // console.log(this.form.get('difficulty').value);
+    // console.log(this.form.get('class').value);
 
     this.submitted.emit(this.form);
-    // this.submitted.emit({this.form.get('name').value, this.form.get('dueDate').value});
   }
 }

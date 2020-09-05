@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import {MatTableModule} from '@angular/material/table';
 
@@ -22,6 +22,8 @@ export class DashboardComponent implements OnInit {
 
   displayedColumns: string[] = ['check', 'name', 'dueDate', 'difficulty', 'class'];
   dataSource = Assignment_DATA;
+
+  @Input() event: any;
 
   constructor() { }
 
