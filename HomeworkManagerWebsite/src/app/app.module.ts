@@ -8,7 +8,7 @@ import { ClassesComponent } from './classes/classes.component';
 import { NewAssignmentComponent } from './new-assignment/new-assignment.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-// import { MatDatepickerModule, MatNativeDateModule} from '@angular/material';
+import { MatNativeDateModule} from '@angular/material/core';
 import {MatTableModule} from '@angular/material/table';
 
 
@@ -25,8 +25,7 @@ import {MatTableModule} from '@angular/material/table';
     MatTableModule,
     FormsModule,
     ReactiveFormsModule,
-    // MatDatepickerModule,
-    // MatNativeDateModule
+    MatNativeDateModule
   ],
   providers: [],
   bootstrap: [AppComponent]
