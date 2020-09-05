@@ -1,8 +1,18 @@
 <div [formGroup]="form"> 
     <label for="name">Name:</label><br>
     <input type="text" id="name" name="name" formControlName="name"><br>
+   
     <label for="dueDate">Due Date:</label><br>
-    <input type="text" id="dueDate" name="dueDate" formControlName="dueDate">
+    <input type="text" id="dueDate" name="dueDate" formControlName="dueDate"><br>
+
+    <label for="difficulty">Difficulty:</label><br>
+    <input type="text" id="difficuly" name="difficulty" formControlName="difficulty"><br>
+    <!-- <input matInput [matDatepicker]="difficulty">
+    <mat-datepicker-toggle matSuffix [for]="difficulty"></mat-datepicker-toggle>
+    <mat-datepicker #difficulty></mat-datepicker> -->
+    
+    <label for="class">Class:</label><br>
+    <input type="text" id="class" name="class" formControlName="class"><br>
 </div>
 
 <button mat-raised-button (click)="submit()">Submit</button>

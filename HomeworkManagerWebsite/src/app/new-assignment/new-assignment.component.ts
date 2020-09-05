@@ -1,5 +1,6 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
+// import { MatDatepickerModule, MatNativeDateModule} from '@angular/material';
 
 @Component({
   selector: 'app-new-assignment',
@@ -13,7 +14,9 @@ export class NewAssignmentComponent implements OnInit {
   constructor(fb:FormBuilder) {
     this.form = fb.group({
       name:'',
-      dueDate: ''
+      dueDate: '',
+      difficulty: '',
+      class: ''
       });
     }
 
@@ -23,6 +26,8 @@ export class NewAssignmentComponent implements OnInit {
   submit(): void {
     console.log(this.form.get('name').value);
     console.log(this.form.get('dueDate').value);
+    console.log(this.form.get('difficulty').value);
+    console.log(this.form.get('class').value);
 
     this.submitted.emit(this.form);
     // this.submitted.emit({this.form.get('name').value, this.form.get('dueDate').value});
