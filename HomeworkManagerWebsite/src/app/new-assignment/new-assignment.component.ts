@@ -1,6 +1,5 @@
 import { Component, OnInit, Output, EventEmitter} from '@angular/core';
 import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
-import { MatNativeDateModule} from '@angular/material/core';
 
 @Component({
   selector: 'app-new-assignment',
@@ -12,11 +11,11 @@ export class NewAssignmentComponent implements OnInit {
   form: FormGroup;
 
   constructor(fb:FormBuilder) {
-    this.form = fb.group({
-      name:'',
-      dueDate: '',
-      difficulty: '',
-      class: ''
+    this.form = new FormGroup({
+      name: new FormControl('Assignment'),
+      // dueDate: new FormControl('June'),
+      difficulty: new FormControl('Easy'),
+      class: new FormControl('Math')
       });
     }
 

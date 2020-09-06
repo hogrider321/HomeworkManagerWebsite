@@ -11,6 +11,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import { MatDatepickerModule} from '@angular/material/datepicker';
 import { MatNativeDateModule} from '@angular/material/core';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 
 @NgModule({
@@ -18,7 +19,7 @@ import { MatNativeDateModule} from '@angular/material/core';
     AppComponent,
     DashboardComponent,
     ClassesComponent,
-    NewAssignmentComponent
+    NewAssignmentComponent,
   ],
   imports: [
     BrowserModule,
@@ -27,7 +28,8 @@ import { MatNativeDateModule} from '@angular/material/core';
     FormsModule,
     ReactiveFormsModule,
     MatNativeDateModule,
-    MatDatepickerModule
+    MatDatepickerModule,
+    MatFormFieldModule
   ],
   providers: [],
   bootstrap: [AppComponent]

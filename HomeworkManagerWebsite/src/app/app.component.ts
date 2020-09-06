@@ -12,6 +12,7 @@ export class AppComponent {
   public clickedEvent: any;
 
   assignmentSubmitted(event: any) {
+    console.log("arrived")
     this.clickedEvent = event;
   }
 }
