@@ -13,7 +13,7 @@ export class NewAssignmentComponent implements OnInit {
   constructor(fb:FormBuilder) {
     this.form = new FormGroup({
       name: new FormControl('Assignment'),
-      // dueDate: new FormControl('June'),
+      dueDate: new FormControl('June'),
       difficulty: new FormControl('Easy'),
       class: new FormControl('Math')
       });
