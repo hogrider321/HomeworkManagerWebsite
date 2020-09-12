@@ -6,7 +6,12 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
   templateUrl: './new-assignment.component.html'
 })
 export class NewAssignmentComponent implements OnInit {
-  @Output() submitted = new EventEmitter<any>();
+  // @Output() submitted = new EventEmitter<any>();
+  @Output() submitted: EventEmitter<any> = new EventEmitter(); // child to parent
+
+  anyFunction(){ // child to parent
+    console.log('called from parent')
+  } 
 
   form: FormGroup;
 
@@ -22,12 +27,18 @@ export class NewAssignmentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  submit(): void {
-    // console.log(this.form.get('name').value);
-    // console.log(this.form.get('dueDate').value);
-    // console.log(this.form.get('difficulty').value);
-    // console.log(this.form.get('class').value);
+  // submit(): void {
+  //   // console.log(this.form.get('name').value);
+  //   // console.log(this.form.get('dueDate').value);
+  //   // console.log(this.form.get('difficulty').value);
+  //   // console.log(this.form.get('class').value);
 
+  //   this.submitted.emit(this.form);
+  // }
+
+  submit() {
+    // child to parent: emit data to parent component
     this.submitted.emit(this.form);
   }
+
 }
