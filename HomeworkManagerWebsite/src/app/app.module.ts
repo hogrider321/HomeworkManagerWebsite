@@ -100,31 +100,3 @@ import {MatPaginatorModule} from '@angular/material/paginator';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
-
-
-
-
-
-// @NgModule({
-//   declarations: [
-//     AppComponent,
-//     DashboardComponent,
-//     ClassesComponent,
-//     NewAssignmentComponent,
-//   ],
-//   imports: [
-//     BrowserModule,
-//     AppRoutingModule,
-//     MatTableModule,
-//     FormsModule,
-//     ReactiveFormsModule,
-//     MatNativeDateModule,
-//     MatDatepickerModule,
-//     MatFormFieldModule,
-//     MatInputModule,
-//     BrowserAnimationsModule
-//   ],
-//   providers: [],
-//   bootstrap: [AppComponent]
-// })
-// export class AppModule { }

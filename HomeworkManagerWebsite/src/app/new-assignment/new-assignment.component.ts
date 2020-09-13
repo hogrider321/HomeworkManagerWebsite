@@ -6,14 +6,13 @@ import { FormControl, FormGroup, FormBuilder } from '@angular/forms';
   templateUrl: './new-assignment.component.html'
 })
 export class NewAssignmentComponent implements OnInit {
-  // @Output() submitted = new EventEmitter<any>();
+  // @Output() submitted = new EventEmitter<any>(); // same as below
   @Output() submitted: EventEmitter<any> = new EventEmitter(); // child to parent
 
-  anyFunction(){ // child to parent
-    console.log('called from parent')
-  } 
-
   form: FormGroup;
+
+  formCompleted: boolean = false;
+  // formCompletedOBS = this.formCompleted.asObservable(); booleans cant be observables???
 
   constructor(fb:FormBuilder) {
     this.form = new FormGroup({
@@ -27,16 +26,8 @@ export class NewAssignmentComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  // submit(): void {
-  //   // console.log(this.form.get('name').value);
-  //   // console.log(this.form.get('dueDate').value);
-  //   // console.log(this.form.get('difficulty').value);
-  //   // console.log(this.form.get('class').value);
-
-  //   this.submitted.emit(this.form);
-  // }
-
   submit() {
+    this.formCompleted = true;
     // child to parent: emit data to parent component
     this.submitted.emit(this.form);
   }
